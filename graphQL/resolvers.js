@@ -8,7 +8,7 @@ const resolvers = {
 
                 if(!page) page = 1
 
-                if(!size) size = 10 // default size of page
+                if(!size) size = 30 // default size of page
 
                 const limit = parseInt(size)
                 const skip = (page-1)*size
