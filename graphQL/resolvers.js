@@ -41,12 +41,12 @@ const resolvers = {
             try {
                 console.log(args)
                 const newAudit = new Audit({
-                    severity: args.severity,
-                    component: args.component,
-                    context: args.component,
-                    message: args.message,
+                    severity: args.audit.severity,
+                    component: args.audit.component,
+                    context: args.audit.component,
+                    message: args.audit.message,
                 })
-                newAudit.tags.push(args.tag)
+                newAudit.tags.push(args.audit.tag)
 
                 newAudit.save();
 
