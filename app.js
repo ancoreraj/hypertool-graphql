@@ -6,7 +6,8 @@ const app = express();
 const connectDB = require('./config/db')
 const { typeDefs } = require('./graphQL/typeDefs')
 const { resolvers } = require('./graphQL/resolvers')
-
+const cors = require('cors')
+app.use(cors())
 dotenv.config({ path: './config/.env' })
 
 let apolloServer = null;
