@@ -18,16 +18,14 @@ const typeDefs = gql`
         getSingleLog(id : String) : Audit
     }
 
-    input createLogInput {
-        severity: String, 
-        component: String, 
-        context: String, 
-        message: String, 
-        tag: String
-    }
-
     type Mutation {
-        createLog(audit : createLogInput): Audit
+        createLog(
+            severity: String, 
+            component: String, 
+            context: String, 
+            message: String, 
+            tag: String
+            ): Audit
     }
 
 `
